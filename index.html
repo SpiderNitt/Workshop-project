@@ -11,7 +11,6 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,18 +21,17 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
-                </li>
-                
+                </li>   
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" id="searchButton" type="submit">Search</button>
             </form>
             </div>
         </div>
     </nav>
     <div class="container-fluid">
-        <img src="https://images.unsplash.com/photo-1600577916048-804c9191e36c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="" width="100%" class="img-fluid">
+        <!-- <img src="https://images.unsplash.com/photo-1600577916048-804c9191e36c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="" width="100%" class="img-fluid"> -->
         <div class="container-fluid m-2">
             <h2 class="text-center">Watch List</h2>
             <div id="carouselExampleControls" class="carousel slide carousel-dark" data-bs-ride="carousel">
@@ -75,52 +73,13 @@
                 <h4>Movies List</h4>
                 <div class="col-md-7 movie-list">
                     <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
-                    </div>
-                    <div class="alert alert-info movie-name">
-                        A simple info alert—check it out!
-                        <div class="btn btn-primary">View More</div>
+                        <div id="movieTitle">
+                            A simple info alert—check it out!
+                        </div>
+                        <div  id="movieYear" >Year</div>
+                        <div  id="moviedetails" style="display: none;">details</div>
+                        <div class="btn btn-primary" id="movieDetailsbtn">View More</div>
+                        <div class="btn btn-primary"  style="display: none;" id="viewLessbtn">View Less</div>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -162,6 +121,8 @@
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
