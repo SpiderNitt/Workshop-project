@@ -7,6 +7,9 @@ body{
 }
 .movie-list{
     height: 100%;
+}
+.inner-container{
+    height: 100%;
     overflow-y: auto;
 }
 .movie-fav-display{
@@ -29,9 +32,21 @@ body{
     justify-content: center;
     align-items: center;
 }
+.movie-name{
+    margin: auto;
+}
+.movie-name-img{
+    height: 150px;
+    width: 150px;
+}
+.movie-name-info{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
 .movie-name,.movie-fav-list,.movie-watched_already{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0.6rem;
 }
