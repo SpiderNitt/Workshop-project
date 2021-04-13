@@ -50,9 +50,12 @@ async function displayWatchlist() {
 				})
 				.then((data) => {
 					watchlist_movies.innerHTML += `
-                    <div class="alert alert-info movie-name">
-                        ${data.Title}
-                        <div class="btn btn-primary">View More</div>
+					<div class="alert alert-info movie-name">
+                        <img class="movie-name-img" src="${data.Poster}" alt="">
+                        <div class="movie-name-info">
+                          <p>${data.Title}</p>
+                          <div class="btn btn-primary">View More</div>
+                        </div>
                     </div>
                     `;
 				});
