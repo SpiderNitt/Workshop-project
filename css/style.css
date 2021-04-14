@@ -35,3 +35,27 @@ body{
     align-items: center;
     padding: 0.6rem;
 }
+
+#select{
+    padding:5px;
+    background-color: rgb(72, 0, 206);
+    color:whitesmoke;
+    border-radius: 7px;
+    border-radius: 7px;
+}
+
+#searchInput{
+    padding:5px;
+    border-radius: 7px;
+    justify-content: center;
+}
+#select-box{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding:5px;
+}
+.movie{
+    margin:10px
+}
+  
