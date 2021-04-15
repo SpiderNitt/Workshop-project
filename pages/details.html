@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row border">
                 <div class="col-4 movie-details-img">
-                    <img class="img-fluid rounded" src="../assets/images/example1.jpg" alt="...">
+                    <img class="img-fluid rounded" src="../assets/images/example1.jpg" alt="..." id="movie_image">
                 </div>
                 <div class="col-8" >
                     <div class="btn-group float-end" style="margin-bottom: 0%;">
@@ -48,7 +48,7 @@
                                 <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                             </svg>
                         </a>
-                        <a href="#" class="btn btn-primary">
+                        <a href="#" class="btn btn-primary" id="watchlist_btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
                                 <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
                             </svg>
@@ -67,33 +67,43 @@
             <tbody>
                 <tr>
                     <th scope="row">Movie Name</th>
-                    <td colspan="3">Joji</td>
+                    <td colspan="3" id="movie_name">Joji</td>
                 </tr>
                 <tr>
-                    <th scope="row">desc</th>
-                    <td colspan="3">Joji, an engineering dropout and the youngest son of a rich family lives with his aspirations of becoming super wealthy. 
+                    <th scope="row">Released On</th>
+                    <td colspan="3" id="movie_release_date">Dileesh Pothan</td>
+                </tr>
+                <tr>
+                    <th scope="row">Genre</th>
+                    <td colspan="3" id="movie_genre">Dileesh Pothan</td>
+                </tr>
+                <tr>
+                    <th scope="row">Description</th>
+                    <td colspan="3" id="movie_description">Joji, an engineering dropout and the youngest son of a rich family lives with his aspirations of becoming super wealthy. 
                         Driven by greed and blind ambition, 
                         he decides to execute his plans following an unexpected event in the family.
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Director</th>
-                    <td colspan="3">Dileesh Pothan</td>
+                    <th scope="row">IMDB Rating</th>
+                    <td colspan="3" id="movie_imdb_rating">Dileesh Pothan</td>
+                </tr>
+                <tr>
+                    <th scope="row">Runtime</th>
+                    <td colspan="3" id="movie_runtime">Dileesh Pothan</td>
                 </tr>
                 <tr>
                     <th scope="row">Director</th>
-                    <td colspan="3">Dileesh Pothan</td>
+                    <td colspan="3" id="movie_director">Dileesh Pothan</td>
                 </tr>
                 <tr>
-                    <th scope="row">Director</th>
-                    <td colspan="3">Dileesh Pothan</td>
-                </tr>
-                <tr>
-                    <th scope="row">Director</th>
-                    <td colspan="3">Dileesh Pothan</td>
+                    <th scope="row">Actors</th>
+                    <td colspan="3" id="movie_actors">Dileesh Pothan</td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <script src="../js/watchlist.js"></script>
+    <script src="../js/details.js"></script>
 </body>
 </html>
