@@ -1,9 +1,5 @@
 function addToWatchlist(id) {
-	const res = localStorage.getItem("watchlist");
-	let watchlist = JSON.parse(res);
-	if (watchlist === null || watchlist === undefined) {
-		watchlist = [];
-	}
+	let watchlist=returnWatchList();
 	if (watchlist.includes(id)) {
 		console.log("Already present");
 	} else {
@@ -13,11 +9,7 @@ function addToWatchlist(id) {
 }
 
 function removeFromWatchlist(id) {
-	const res = localStorage.getItem("watchlist");
-	let watchlist = JSON.parse(res);
-	if (watchlist === null || watchlist === undefined) {
-		watchlist = [];
-	}
+	let watchlist=returnWatchList();
 	if (watchlist.includes(id)) {
 		watchlist = watchlist.filter((val) => val !== id);
 		localStorage.setItem("watchlist", JSON.stringify(watchlist));
@@ -26,41 +18,22 @@ function removeFromWatchlist(id) {
 	}
 }
 
-async function displayWatchlist() {
+function isPresentWatchlist(id){
 	const res = localStorage.getItem("watchlist");
 	let watchlist = JSON.parse(res);
 	if (watchlist === null || watchlist === undefined) {
 		watchlist = [];
 	}
-	const watchlist_movies = document.getElementById("watchlist");
-	watchlist_movies.innerHTML = "";
-	if (watchlist.length === 0) {
-        console.log("watchlist is Empty");
-		watchlist_movies.innerHTML += `
-            <div class="alert alert-info movie-name">
-                Your watchlist is empty
-            </div>
-        `;
-	} else {
-        console.log(watchlist);
-		watchlist.forEach((element) => {
-			fetch(`http://www.omdbapi.com/?apikey=e94d2f36&i=${element}`)
-				.then((res) => {
-					return res.json();
-				})
-				.then((data) => {
-					watchlist_movies.innerHTML += `
-					<div class="alert alert-info movie-name">
-                        <img class="movie-name-img" src="${data.Poster}" alt="">
-                        <div class="movie-name-info">
-                          <p>${data.Title}</p>
-                          <div class="btn btn-primary">View More</div>
-                        </div>
-                    </div>
-                    `;
-				});
-		});
-	}
+	return watchlist.includes(id);
 }
 
-displayWatchlist();
+function returnWatchList(){
+	const res = localStorage.getItem("watchlist");
+	let watchlist = JSON.parse(res);
+	if (watchlist === null || watchlist === undefined) {
+		watchlist = [];
+	}
+	return watchlist;
+}
+
+// addToWatchlist("tt1345836");
