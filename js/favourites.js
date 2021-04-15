@@ -40,3 +40,4 @@ function removeFromFavourites(id){
     localStorage.setItem('favourite', list.toString());
 }
 
+// addToFavourite("tt1345836");
