@@ -4,6 +4,7 @@ const API_KEY= 'ecdb4cd2';
 const selectBox = document.getElementById("select-box");
 const searchInput = document.querySelector("#searchInput");
 const select = document.getElementById("select");
+const optionText = document.querySelector("#optionText");
 
 function getData(url){
     fetch(url)
@@ -11,15 +12,39 @@ function getData(url){
     .then((data)=>{
         console.log('Data:', data.Search);
         let MoviesList =  data.Search;
+        let arr=[]
+        
+        if (data.Search){
+            MoviesList.forEach(function(value, key) {
+                console.log(key + ' : ' + value.Title)
+                // var option = document.createElement("OPTION");
+                txt = `
+                <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h6 class="card-title">${value.Title}</h6>
+                   
+                </div>
+                </div>
+                `;
+                arr.push(txt)
+                // optionText.innerHTML=txt;
+                // option.setAttribute("value", value.Title);
+                // select.insertBefore(option,select.lastChild);
+              })
+        }else{
+            txt = `
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h6 class="card-title">No search results</h6>  
+            </div>
+            </div>
+            `;
+            arr.push(txt)
+        }
+     
+          const html= arr.join(" ");
+          optionText.innerHTML= html;
 
-        MoviesList.forEach(function(value, key) {
-            console.log(key + ' : ' + value.Title)
-            var option = document.createElement("OPTION");
-            txt = document.createTextNode(value.Title);
-            option.appendChild(txt);
-            option.setAttribute("value", value.Title);
-            select.insertBefore(option,select.lastChild);
-          })
     })
     .catch(err=> console.log(err))
 }

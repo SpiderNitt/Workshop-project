@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <br class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,16 +24,18 @@
                 </li>   
             </ul>
             <div class="dropdown" id="select-box">
-              <input type='text' id='searchInput'/>
-            <div id="select-box">
-
-              <select id="select">
-                  <option value="movie" class="movie">Search</option>
-              </select>
-            </div>
+                <form class="d-flex" >
+                    <input class="form-control me-2" id='searchInput' placeholder="Search" aria-label="Search">
+                    <button id="select" class="btn btn-outline-success" >Search</button>
+                  </form>
+              <!-- <input type='text' id='searchInput'/> -->
+            <!-- <div >
+              <button id="select" style="margin: 5px;">Search</button>
+            </div> -->
             </div>
         </div>
     </nav>
+    <div id="optionText"></div>
     <div class="container-fluid">
         <!-- <img src="https://images.unsplash.com/photo-1600577916048-804c9191e36c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="" width="100%" class="img-fluid"> -->
         <div class="container-fluid m-2">

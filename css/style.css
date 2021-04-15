@@ -36,26 +36,22 @@ body{
     padding: 0.6rem;
 }
 
-#select{
-    padding:5px;
-    background-color: rgb(72, 0, 206);
-    color:whitesmoke;
-    border-radius: 7px;
-    border-radius: 7px;
-}
-
 #searchInput{
     padding:5px;
     border-radius: 7px;
     justify-content: center;
 }
 #select-box{
-    display: flex;
-    flex-direction: row;
-    float: right;
-    padding:5px;
+    margin: 10px;
 }
 .movie{
     margin:10px
+}
+#optionText{
+    position:absolute;
+    z-index: 5;
+    right:10px;
+    height: 200px;
+    overflow-y: auto;
 }
   
