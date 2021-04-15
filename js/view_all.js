@@ -15,7 +15,7 @@ function displayList(list){
     }
     else if(list=="watched"){
         list_name.innerText="Already Watched"
-        console.log("watched");
+        displayFullList("watched","Already Watched");
     }
     else if(list=="favourites"){
         list_name.innerText="Favourites";
@@ -27,7 +27,8 @@ async function displayFullList(list,listName) {
     let movielist;
     if(list==="watchlist") movielist= returnWatchList();
     else if(list==="favourites") movielist= getFavourites();
-    console.log(movielist);
+    else if(list==="watched") movielist= returnWatched();
+    if(movielist==null||movielist==undefined) return;
 	const movielist_movies = document.getElementById("movies-list");
 	movielist_movies.innerHTML = "";
 	if (movielist.length === 0) {
