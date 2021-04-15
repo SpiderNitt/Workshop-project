@@ -1,5 +1,8 @@
 async function displayHomeMovieList(elementId,listName){
-	let movielist =returnWatchList();
+	let movielist;
+	if(elementId==="watchlist") movielist = returnWatchList();
+	else if(elementId==="favourites") movielist = getFavourites();
+	console.log(movielist);
 	const movielist_movies = document.getElementById(elementId);
 	movielist_movies.innerHTML = "";
 	if (movielist.length === 0) {
@@ -29,3 +32,4 @@ async function displayHomeMovieList(elementId,listName){
 }
 
 displayHomeMovieList("watchlist","Watchlist");
+displayHomeMovieList("favourites","Favourites");

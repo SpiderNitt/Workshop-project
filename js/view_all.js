@@ -17,15 +17,17 @@ function displayList(list){
         list_name.innerText="Already Watched"
         console.log("watched");
     }
-    else if(list=="favorites"){
-        list_name.innerText="Favorites";
-        console.log("favorites");
+    else if(list=="favourites"){
+        list_name.innerText="Favourites";
+        displayFullList("favourites","Favourites");
     }
 }
 
 async function displayFullList(list,listName) {
     let movielist;
     if(list==="watchlist") movielist= returnWatchList();
+    else if(list==="favourites") movielist= getFavourites();
+    console.log(movielist);
 	const movielist_movies = document.getElementById("movies-list");
 	movielist_movies.innerHTML = "";
 	if (movielist.length === 0) {
