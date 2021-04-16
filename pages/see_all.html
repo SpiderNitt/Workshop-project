@@ -25,14 +25,16 @@
                 <a class="nav-link" href="#">Link</a>
             </li>
             
-        </ul>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-dark" type="submit">Search</button>
-        </form>
+            <div class="dropdown" id="select-box">
+              <form class="d-flex" >
+                  <input class="form-control me-2" id='searchInput' placeholder="Search" aria-label="Search">
+                  <button id="select" class="btn btn-outline-success" >Search</button>
+                </form>
+          </div>
         </div>
     </div>
   </nav>
+  <div id="optionText"></div>
     <div class="container">
       <h3 style="color: aliceblue;">Movie Lists</h3>
         <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
@@ -123,5 +125,6 @@
           
         </div>
       </div>
+      <script src="../js/search.js"></script>
 </body>
 </html>

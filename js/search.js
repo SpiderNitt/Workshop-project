@@ -19,9 +19,9 @@ function getData(url){
                 console.log(key + ' : ' + value.Title)
                 // var option = document.createElement("OPTION");
                 txt = `
-                <div class="card" style="width: 18rem;">
+                <div class="card" onclick="window.location.href='../pages/details.html?id=${value.imdbID}'" style="width: 18rem; cursor: pointer;">
                 <div class="card-body">
-                    <h6 class="card-title">${value.Title}</h6>
+                    <h6  style="text-decoration:none; color:#2F4F4F"class="card-title">${value.Title}</h6>
                    
                 </div>
                 </div>
@@ -40,6 +40,7 @@ function getData(url){
             </div>
             `;
             arr.push(txt)
+            optionText.innerHTML=txt;
         }
      
           const html= arr.join(" ");
@@ -61,6 +62,13 @@ select.onclick =function(e){
     console.log(newUrl)
     getData(newUrl);  
 }
+optionText.onmouseout=()=>{
+    optionText.style.display="none"
+}
+selectBox.onmouseover=()=>{
+    optionText.style.display="block"
+}
+
 
 
 
