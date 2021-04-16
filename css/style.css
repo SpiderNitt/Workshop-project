@@ -54,7 +54,9 @@ body{
     
 }
 #select-box{
-    margin: 10px;
+    position: absolute;
+    right:20px;
+    bottom:10px
 }
 .movie{
     margin:10px
