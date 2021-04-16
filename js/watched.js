@@ -6,6 +6,7 @@ function addToWatched(id) {
 		watched.unshift(id);
 		localStorage.setItem("watched", JSON.stringify(watched));
 	}
+	showColorWatched();
 }
 
 function removeFromWatched(id) {
@@ -16,6 +17,7 @@ function removeFromWatched(id) {
 	} else {
 		console.log("Element not present");
 	}
+	showColorWatched();
 }
 
 function returnWatched(){
@@ -27,9 +29,27 @@ function returnWatched(){
 	return watched;
 }
 
-function isPresentWatched(id){
+function isPresentWatched(){
 	let watched = returnWatched();
 	return watched.includes(id);
 }
 
-// addToWatched("tt1345836");
+function showColorWatched(){
+  if(isPresentWatched()){
+    document.getElementById('watched').setAttribute('fill','dark-green');
+  }
+  else{
+  document.getElementById('watched').setAttribute('fill','currentColor');
+  }
+}
+
+showColorWatched();
+
+function watchedClick(){
+	if(!isPresentWatched()){
+		addToWatched(id);
+	}
+	else{
+		removeFromWatched(id);
+	}
+}

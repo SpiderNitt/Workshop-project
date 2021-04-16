@@ -6,6 +6,7 @@ function addToWatchlist(id) {
 		watchlist.unshift(id);
 		localStorage.setItem("watchlist", JSON.stringify(watchlist));
 	}
+	showColorWatchlist();
 }
 
 function removeFromWatchlist(id) {
@@ -16,6 +17,7 @@ function removeFromWatchlist(id) {
 	} else {
 		console.log("Element not present");
 	}
+	showColorWatchlist();
 }
 
 function isPresentWatchlist(id){
@@ -36,4 +38,22 @@ function returnWatchList(){
 	return watchlist;
 }
 
-// addToWatchlist("tt1345836");
+function watchlistClick(){
+	if(isPresentWatchlist(id)){
+        removeFromWatchlist(id);
+    }
+    else{
+        addToWatchlist(id);
+    }
+}
+
+function showColorWatchlist(){
+  if(isPresentWatchlist(id)){
+    document.getElementById('watch-list').setAttribute('fill','dark-green');
+  }
+  else{
+  document.getElementById('watch-list').setAttribute('fill','currentColor');
+  }
+}
+
+showColorWatchlist();
