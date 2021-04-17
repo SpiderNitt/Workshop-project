@@ -1,11 +1,15 @@
 body{
     overflow-x: hidden;
+    background-color: rgb(37, 37, 37);
 }
 .movie-display{
     height: 70vh;
     width: 100%;
 }
 .movie-list{
+    height: 100%;
+}
+.inner-container{
     height: 100%;
     overflow-y: auto;
 }
@@ -20,7 +24,7 @@ body{
 .movie-watchList-item{
     height: 400px;
     width: 100%;
-    background-color: #ddd;
+    background-color: rgba(255, 255, 255, 0);
 }
 .movie-watchList-content{
     width: 100%;
@@ -29,9 +33,116 @@ body{
     justify-content: center;
     align-items: center;
 }
+.movie-name{
+    margin: auto;
+}
+.movie-name-img{
+    height: 150px;
+    width: 150px;
+}
+.movie-name-info{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
 .movie-name,.movie-fav-list,.movie-watched_already{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0.6rem;
+}
+
+#searchInput{
+    padding:5px;
+    border-radius: 7px;
+    justify-content: center;
+    width:250px
+}
+#select{
+    background-color: rgb(22, 105, 105);
+    color:rgb(230, 230, 230)
+}
+#select:hover{
+    background-color: rgb(13, 87, 87);
+    color:rgb(255, 255, 255);
+    border: solid rgb(214, 214, 214) 2.3px
+    
+}
+#select-box{
+    position: absolute;
+    right:20px;
+    bottom:10px
+}
+.movie{
+    margin:10px
+}
+#optionText{
+    position:absolute;
+    z-index: 5;
+    right:10px;
+    height: 200px;
+    margin:10px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+  
+div.movie-container {
+    background-color: #333;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+  
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: rgb(119, 117, 117);
+}
+
+div.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: aliceblue;
+}
+
+div.movie-img {
+    background-color: rgba(167, 167, 167, 0.336);
+}
+
+div.movie-img:hover{
+    background-color: rgb(167, 167, 167);
+}
+
+div.movie-details-img img{
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(247, 244, 244); 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(177, 175, 175); 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #757575; 
 }
