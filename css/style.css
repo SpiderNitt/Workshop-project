@@ -33,6 +33,14 @@ body{
     justify-content: center;
     align-items: center;
 }
+.movie-watchList-image{
+    max-height: 100%;
+}
+#movie_image{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .movie-name{
     margin: auto;
 }
