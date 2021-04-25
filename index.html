@@ -11,19 +11,11 @@
 <body>
     <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">Spider Movie Lists</a>
+            <a class="navbar-brand" href="/">Spider Movie Lists</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>   
-            </ul>
             <div class="dropdown" id="select-box">
                 <form class="d-flex" >
                     <input class="form-control me-2" id='searchInput' placeholder="Search" aria-label="Search">
@@ -34,27 +26,34 @@
         </div>
     </nav>
     <div class="container-fluid mt-3">
-        <div class="container">
+        <div class="container popular-movies">
             <div id="carouselExampleControls" class="carousel slide carousel-dark" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="movie-watchList-item">
                         <div class="movie-watchList-content">
-                            <img alt="image1" class="img-fluid movie-watchList-image" src="./assets/images/master-2020_158157490720.jpg" />
+                            <img alt="image1" class="img-fluid movie-watchList-image" src="./assets/images/Screenshot 2021-04-25 at 10-37-00 Godzilla vs Kong (2021).png" />
                         </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="movie-watchList-item">
                         <div class="movie-watchList-content">
-                            <img alt="image1" class="img-fluid movie-watchList-image" src="./assets/images/master-2020_16093959582.jpg" />
+                            <img alt="image1" class="img-fluid movie-watchList-image" src="./assets/images/Screenshot 2021-04-25 at 10-38-15 Zack Snyder's Justice League (2021).png" />
                         </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="movie-watchList-item">
                         <div class="movie-watchList-content">
-                            <img alt="image1" class="img-fluid movie-watchList-image" src="./assets/images/xmaster_7.jpg.pagespeed.ic.Pisw650MY7.jpg" />
+                            <img alt="image1" class="img-fluid movie-watchList-image" src="./assets/images/Screenshot 2021-04-25 at 10-36-34 Fast Furious 9 (2021).png" />
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="movie-watchList-item">
+                        <div class="movie-watchList-content">
+                            <img alt="image1" class="img-fluid movie-watchList-image" src="./assets/images/Screenshot 2021-04-25 at 10-37-31 Tenet (2020).png" />
                         </div>
                     </div>
                   </div>
@@ -71,21 +70,16 @@
         </div>
         <div class="container movie-container">
             <div class="header">
-                <h3 class="m-auto">Watchlist</h3>
-                <a href="./pages/see_all.html?list=watchlist">see all</a>
+                <h3>Watchlist</h3>
+                <a href="./pages/see_all.html?list=watchlist" class="btn btn-info">see all</a>
             </div>
             <div class="scrollmenu" id="watchlist">
-                <!-- <a href="./pages/details.html">
-                    <div class="p-3 border bg-light">
-                        <img src="./assets/images/example1.jpg" alt="example1" width="100%" />
-                    </div>
-                </a> -->
             </div>
         </div>
         <div class="container movie-container">
             <div class="header">
-                <h3 class="m-auto">Favourite</h3>
-                <a href="./pages/see_all.html?list=favourites">see all</a>
+                <h3>Favourite</h3>
+                <a href="./pages/see_all.html?list=favourites" class="btn btn-info">see all</a>
             </div>
             <div class="scrollmenu" id="favourites">
                 
@@ -93,8 +87,8 @@
         </div>
         <div class="container movie-container">
             <div class="header">
-                <h3 class="m-auto">Already Watched</h3>
-                <a href="./pages/see_all.html?list=watched">see all</a>
+                <h3>Already Watched</h3>
+                <a href="./pages/see_all.html?list=watched" class="btn btn-info">see all</a>
             </div>
             <div class="scrollmenu" id="watched">
                 
